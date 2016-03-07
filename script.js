@@ -85,19 +85,16 @@ window.onload = function()
                     }
                 }
         }
-        if (counter > 1){
-            for (i = 0; i < arrayPos.length; i ++){
-                nom_div(arrayPos[i]).className = "error";  
-            }
-            status = false;
-        } else {
-            for (i = 0; i < arrayPos.length; i ++){
-                nom_div(arrayPos[i]).className = "interno";
-            }
-            status = true;
-        }
+        if (counter > 1){ pintarCampos(arrayPos,"error"); status = false; } else { pintarCampos(arrayPos,"interno"); status = true;}
         return status;
+    }
 
+
+    function pintarCampos(array,pint)
+    {
+       for (i = 0; i < array.length; i ++){
+            nom_div(array[i]).className = pint;  
+            }
     }
 
     var validaVertical = function(array,valor)
@@ -127,17 +124,8 @@ window.onload = function()
                     }
                 }
         }
-            if (counter > 1) {
-                for (i = 0; i < arrayPos.length; i ++){
-                    nom_div(arrayPos[i]).className = "error";  
-                }
-                status = false;
-            } else {
-                for (i = 0; i < arrayPos.length; i ++){
-                    nom_div(arrayPos[i]).className = "interno";
-            }
-            status = true;
-        }
+        if (counter > 1){ pintarCampos(arrayPos,"error"); status = false; } else { pintarCampos(arrayPos,"interno"); status = true;}
+           
         return status;
     }
 
