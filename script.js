@@ -173,7 +173,7 @@ window.onload = function()
                         }
                         else
                         {
-                            txt += "<input type = 'text' class = 'numero' id = '"+(nomID)+"' maxlength = '1' value=''>";
+                            txt += "<input type = 'text' class = 'numero' id = '"+(nomID)+"' maxlength = '30' value=''>";
                             eventos.push(nomID);
                         }
                         txt += "</td>";
